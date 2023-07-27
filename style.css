@@ -1,0 +1,74 @@
+/* Add custom styles as per your design */
+.image-box {
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Reduce the size of boxes */
+.carousel-inner .carousel-item {
+  padding: 15px;
+}
+
+/* Ensure images fit properly in the carousel on mobile devices */
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item {
+    min-height: auto; /* Reset the min-height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 200px; /* Adjust this value as needed */
+    width: 100%; /* Set carousel width to 100% */
+  }
+
+  .carousel-inner .carousel-item img {
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Add this property */
+  }
+
+  .carousel-box {
+    position: relative;
+    max-width: 250px; /* Adjust this value as needed */
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .carousel-indicators li.active {
+    background-color: #007bff;
+  }
+}
